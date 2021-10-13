@@ -1,0 +1,683 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20211013090010
+Username: HISOL-CA\isantillan
+RunAs User: HISOL-CA\isantillan
+Configuration Name: 
+Machine: HSCA-PF1XYC31 (Microsoft Windows NT 10.0.19043.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 38300
+PSVersion: 5.1.19041.1237
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1237
+BuildVersion: 10.0.19041.1237
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\RunStarterKit-2021-10-13.log
+PS D:\_workspace\PurviewAccelerator\PurviewStarter> .\RunStarterKit.ps1
+Checking for Az Module.
+Az Module is already installed.
+Checking for Az.Accounts Module.
+Az.Accounts Module is already imported.
+Checking for Az.Synapse Module.
+Az.Synapse Module is already installed and Imported.
+Checking for SQLServer Module.
+SqlServer Module is already installed.
+Checking for AzureAD Module.
+AzureAD Module is already installed.
+Check for AzureAD Module and Connect to AzureAD
+AzureAD Module is already imported. Follow Instructions to Connect.
+Connecting to Azure Account. Please follow instructions on the pop-up window to complete this step.
+ConnectAzAccount
+
+Account                    SubscriptionName TenantId                             Environment
+-------                    ---------------- --------                             -----------
+isantillan@capaxglobal.com Capax Sandbox    b922b2fb-9e8d-425f-8a22-100cdf194faf AzureCloud
+
+Name               : Capax Sandbox (a571e8c0-6420-4504-b6f3-ed0c12d282a4) - b922b2fb-9e8d-425f-8a22-100cdf194faf -
+                     isantillan@capaxglobal.com
+Account            : isantillan@capaxglobal.com
+Environment        : AzureCloud
+Subscription       : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Tenant             : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TokenCache         :
+VersionProfile     :
+ExtendedProperties : {}
+
+Azure Account connected.
+
+Account      : isantillan@capaxglobal.com
+Environment  : AzureCloud
+Tenant       : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantId     : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantDomain : capaxglobal.com
+
+
+Name               : Capax Sandbox (a571e8c0-6420-4504-b6f3-ed0c12d282a4) - b922b2fb-9e8d-425f-8a22-100cdf194faf -
+                     isantillan@capaxglobal.com
+Account            : isantillan@capaxglobal.com
+Environment        : AzureCloud
+Subscription       : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Tenant             : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TokenCache         :
+VersionProfile     :
+ExtendedProperties : {}
+
+Subscription selection confirmed:
+Subscription Name
+Capax Sandbox
+Subscription ID: a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Tenant ID: b922b2fb-9e8d-425f-8a22-100cdf194faf
+You have chosen Canada Central as your resource location.
+This HTTP triggered function executed successfully. Thanks for using the Purview Accelerator.
+
+AllowCrossTenantReplication :
+KeyCreationTime             : Microsoft.Azure.Commands.Management.Storage.Models.PSKeyCreationTime
+KeyPolicy                   :
+SasPolicy                   :
+ResourceGroupName           : ace.sandbox.isantillan
+StorageAccountName          : isantillan3adcblob
+Id                          : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan
+                              /providers/Microsoft.Storage/storageAccounts/isantillan3adcblob
+Location                    : canadacentral
+Sku                         : Microsoft.Azure.Commands.Management.Storage.Models.PSSku
+Kind                        : StorageV2
+Encryption                  : Microsoft.Azure.Management.Storage.Models.Encryption
+AccessTier                  : Hot
+CreationTime                : 10/13/2021 1:03:33 PM
+CustomDomain                :
+Identity                    :
+LastGeoFailoverTime         :
+PrimaryEndpoints            : Microsoft.Azure.Management.Storage.Models.Endpoints
+PrimaryLocation             : canadacentral
+ProvisioningState           : Succeeded
+SecondaryEndpoints          :
+SecondaryLocation           :
+StatusOfPrimary             : Available
+StatusOfSecondary           :
+Tags                        : {[Owner, Ian Santillan]}
+EnableHttpsTrafficOnly      : True
+AzureFilesIdentityBasedAuth :
+EnableHierarchicalNamespace : False
+FailoverInProgress          :
+LargeFileSharesState        :
+NetworkRuleSet              : Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
+RoutingPreference           :
+BlobRestoreStatus           :
+GeoReplicationStats         :
+AllowBlobPublicAccess       :
+MinimumTlsVersion           :
+EnableNfsV3                 :
+AllowSharedKeyAccess        :
+ExtendedLocation            :
+Context                     : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
+ExtendedProperties          : {}
+
+Blob Storage Account Created
+Data Factory Account Created
+
+AllowCrossTenantReplication :
+KeyCreationTime             : Microsoft.Azure.Commands.Management.Storage.Models.PSKeyCreationTime
+KeyPolicy                   :
+SasPolicy                   :
+ResourceGroupName           : ace.sandbox.isantillan
+StorageAccountName          : isantillan3adcadls
+Id                          : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan
+                              /providers/Microsoft.Storage/storageAccounts/isantillan3adcadls
+Location                    : canadacentral
+Sku                         : Microsoft.Azure.Commands.Management.Storage.Models.PSSku
+Kind                        : StorageV2
+Encryption                  : Microsoft.Azure.Management.Storage.Models.Encryption
+AccessTier                  : Hot
+CreationTime                : 10/13/2021 1:04:01 PM
+CustomDomain                :
+Identity                    :
+LastGeoFailoverTime         :
+PrimaryEndpoints            : Microsoft.Azure.Management.Storage.Models.Endpoints
+PrimaryLocation             : canadacentral
+ProvisioningState           : Succeeded
+SecondaryEndpoints          :
+SecondaryLocation           :
+StatusOfPrimary             : Available
+StatusOfSecondary           :
+Tags                        : {[Owner, Ian Santillan]}
+EnableHttpsTrafficOnly      : True
+AzureFilesIdentityBasedAuth :
+EnableHierarchicalNamespace : True
+FailoverInProgress          :
+LargeFileSharesState        :
+NetworkRuleSet              : Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
+RoutingPreference           :
+BlobRestoreStatus           :
+GeoReplicationStats         :
+AllowBlobPublicAccess       :
+MinimumTlsVersion           :
+EnableNfsV3                 :
+AllowSharedKeyAccess        :
+ExtendedLocation            :
+Context                     : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
+ExtendedProperties          : {}
+
+
+ADLS Storage Account Created
+348ee621-8b80-4e25-bea6-c510430f0aff
+isantillan@capaxglobal.com
+
+VaultUri                     : https://isantillan3kv.vault.azure.net/
+TenantId                     : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantName                   : b922b2fb-9e8d-425f-8a22-100cdf194faf
+Sku                          : Standard
+EnabledForDeployment         : False
+EnabledForTemplateDeployment : False
+EnabledForDiskEncryption     : False
+EnableSoftDelete             : True
+EnablePurgeProtection        :
+EnableRbacAuthorization      : False
+SoftDeleteRetentionInDays    : 90
+AccessPolicies               : {b922b2fb-9e8d-425f-8a22-100cdf194faf}
+AccessPoliciesText           :
+                               Tenant ID                                  : b922b2fb-9e8d-425f-8a22-100cdf194faf
+                               Object ID                                  : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+                               Application ID                             :
+                               Display Name                               : Ian Santillan (isantillan@capaxglobal.com)
+                               Permissions to Keys                        : get, create, delete, list, update, import,
+                               backup, restore, recover
+                               Permissions to Secrets                     : get, list, set, delete, backup, restore,
+                               recover
+                               Permissions to Certificates                : get, delete, list, create, import, update,
+                               deleteissuers, getissuers, listissuers, managecontacts, manageissuers, setissuers,
+                               recover, backup, restore
+                               Permissions to (Key Vault Managed) Storage : delete, deletesas, get, getsas, list,
+                               listsas, regeneratekey, set, setsas, update, recover, backup, restore
+
+
+NetworkAcls                  : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultNetworkRuleSet
+NetworkAclsText              :
+                               Default Action                             : Allow
+                               Bypass                                     : AzureServices
+                               IP Rules                                   :
+                               Virtual Network Rules                      :
+
+OriginalVault                : Microsoft.Azure.Management.KeyVault.Models.Vault
+ResourceId                   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantilla
+                               n/providers/Microsoft.KeyVault/vaults/isantillan3kv
+VaultName                    : isantillan3kv
+ResourceGroupName            : ace.sandbox.isantillan
+Location                     : Canada Central
+Tags                         : {Owner}
+TagsTable                    :
+                               Name   Value
+                               =====  =============
+                               Owner  Ian Santillan
+
+
+
+SecretValue : System.Security.SecureString
+Attributes  : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecretAttributes
+Enabled     : True
+Expires     :
+NotBefore   :
+Created     : 10/13/2021 1:05:04 PM
+Updated     : 10/13/2021 1:05:04 PM
+ContentType :
+Tags        :
+TagsTable   :
+VaultName   : isantillan3kv
+Name        : SQLPassword
+Version     : 39aba064f5d04f0a86f5fe62698934db
+Id          : https://isantillan3kv.vault.azure.net:443/secrets/SQLPassword/39aba064f5d04f0a86f5fe62698934db
+
+Key Vault Account Created
+
+DefaultDataLakeStorage           : Microsoft.Azure.Commands.Synapse.Models.PSDataLakeStorageAccountDetails
+ManagedResourceGroupName         : synapseworkspace-managedrg-28c93d17-4f83-4089-ad4b-209b0968901d
+ProvisioningState                : Succeeded
+SqlAdministratorLogin            : admin50216
+VirtualNetworkProfile            :
+Identity                         : Microsoft.Azure.Commands.Synapse.Models.PSManagedIdentity
+ConnectivityEndpoints            : {[web, https://web.azuresynapse.net?workspace=%2fsubscriptions%2fa571e8c0-6420-4504-
+                                   b6f3-ed0c12d282a4%2fresourceGroups%2face.sandbox.isantillan%2fproviders%2fMicrosoft.
+                                   Synapse%2fworkspaces%2fisantillan3synapsews], [dev,
+                                   https://isantillan3synapsews.dev.azuresynapse.net], [sqlOnDemand,
+                                   isantillan3synapsews-ondemand.sql.azuresynapse.net], [sql,
+                                   isantillan3synapsews.sql.azuresynapse.net]}
+ManagedVirtualNetwork            :
+PrivateEndpointConnections       : {}
+WorkspaceUID                     : 26dbf604-856e-43a4-ba3b-a7542b841097
+ExtraProperties                  : {[WorkspaceType, Normal], [IsScopeEnabled, False]}
+ManagedVirtualNetworkSettings    :
+Encryption                       : Microsoft.Azure.Commands.Synapse.Models.PSEncryptionDetails
+WorkspaceRepositoryConfiguration :
+Tags                             : {Owner}
+TagsTable                        :
+                                   Name   Value
+                                   =====  =============
+                                   Owner  Ian Santillan
+
+Location                         : canadacentral
+Id                               : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isant
+                                   illan/providers/Microsoft.Synapse/workspaces/isantillan3synapsews
+Name                             : isantillan3synapsews
+Type                             : Microsoft.Synapse/workspaces
+
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcadls/providers/Microsoft.Authorization/roleAssig
+                     nments/f2a8ee72-2fd9-476e-aa20-875616771ee2
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcadls
+DisplayName        : isantillan3synapsews
+SignInName         :
+RoleDefinitionName : Storage Blob Data Contributor
+RoleDefinitionId   : ba92f5b4-2d11-453d-a403-e96b0029c9fe
+ObjectId           : ea83ed77-133c-4217-ad8e-20b8c0676722
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+EndIpAddress      : 255.255.255.255
+ProvisioningState : Succeeded
+StartIpAddress    : 0.0.0.0
+
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Synapse/workspaces/isantillan3synapsews/providers/Microsoft.Authorization/roleAssignme
+                     nts/b8b05fd7-bd07-4360-9e75-f577d15b7205
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Synapse/workspaces/isantillan3synapsews
+DisplayName        : apv-isantillan-dev-01
+SignInName         :
+RoleDefinitionName : Reader
+RoleDefinitionId   : acdd72a7-3385-48ef-bd42-f606fba81ae7
+ObjectId           : 348ee621-8b80-4e25-bea6-c510430f0aff
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+ResourceGroupName     : ace.sandbox.isantillan
+WorkspaceName         : isantillan3synapsews
+SqlPoolName           : SQLPool
+Sku                   : DW100c
+MaxSizeBytes          : 263882790666240
+Collation             : SQL_Latin1_General_CP1_CI_AS
+SourceDatabaseId      :
+RecoverableDatabaseId :
+ProvisioningState     : Succeeded
+Status                : Online
+RestorePointInTime    : 1/1/0001 12:00:00 AM
+CreateMode            :
+CreationDate          : 10/13/2021 1:11:36 PM
+Tags                  : {Owner}
+TagsTable             :
+                        Name   Value
+                        =====  =============
+                        Owner  Ian Santillan
+
+Location              : canadacentral
+Id                    : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provi
+                        ders/Microsoft.Synapse/workspaces/isantillan3synapsews/sqlPools/SQLPool
+Type                  : Microsoft.Synapse/workspaces/sqlPools
+
+Synapse Workspace Account Created
+Setting the Managed Identity (isantillan@capaxglobal.com) b8c5f2ce-6eaa-4792-9a0d-2248d191da09 on the Catalog: apv-isantillan-dev-01
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01/providers/Microsoft.Authorization/roleAssignmen
+                     ts/820ee524-a29c-4191-8feb-ee5f90c62f21
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01
+DisplayName        : Ian Santillan
+SignInName         : isantillan@capaxglobal.com
+RoleDefinitionName : Owner
+RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+ObjectId           : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+ObjectType         : User
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.DataFactory/factories/isantillan3adcfactory/providers/Microsoft.Authorization/roleAssi
+                     gnments/8e8857da-7a3e-4f49-b8f3-ec29c2c259b8
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.DataFactory/factories/isantillan3adcfactory
+DisplayName        : Ian Santillan
+SignInName         : isantillan@capaxglobal.com
+RoleDefinitionName : Owner
+RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+ObjectId           : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+ObjectType         : User
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+Setting the Managed Identity ea83ed77-133c-4217-ad8e-20b8c0676722 on the Catalog: apv-isantillan-dev-01
+subscriptionId:a571e8c0-6420-4504-b6f3-ed0c12d282a4 catalogResourceGroup:ace.sandbox.isantillan catalogName=apv-isantillan-dev-01
+Giving isantillan3synapsews (ea83ed77-133c-4217-ad8e-20b8c0676722) Data Curator Access to Purview account apv-isantillan-dev-01
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01/providers/Microsoft.Authorization/roleAssignmen
+                     ts/5f3476fb-2491-4934-959a-6d48e960c30a
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01
+DisplayName        : isantillan3synapsews
+SignInName         :
+RoleDefinitionName : Purview Data Curator (Legacy)
+RoleDefinitionId   : 8a3c2885-9b38-4fd2-9d99-91af537c1347
+ObjectId           : ea83ed77-133c-4217-ad8e-20b8c0676722
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+subscriptionId:a571e8c0-6420-4504-b6f3-ed0c12d282a4 catalogResourceGroup:ace.sandbox.isantillan catalogName=apv-isantillan-dev-01
+Giving apv-isantillan-dev-01 (348ee621-8b80-4e25-bea6-c510430f0aff) Storage Blob Data Reader Access to Storage account isantillan3adcblob
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcblob/providers/Microsoft.Authorization/roleAssig
+                     nments/ab68ad67-dcec-47ed-b4c3-a2de9b54569b
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcblob
+DisplayName        : apv-isantillan-dev-01
+SignInName         :
+RoleDefinitionName : Storage Blob Data Reader
+RoleDefinitionId   : 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1
+ObjectId           : 348ee621-8b80-4e25-bea6-c510430f0aff
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+subscriptionId:a571e8c0-6420-4504-b6f3-ed0c12d282a4 catalogResourceGroup:ace.sandbox.isantillan catalogName=apv-isantillan-dev-01
+Giving apv-isantillan-dev-01 (348ee621-8b80-4e25-bea6-c510430f0aff) Storage Blob Data Reader Access to Storage account isantillan3adcadls
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcadls/providers/Microsoft.Authorization/roleAssig
+                     nments/e8578fb6-1def-4307-94b8-6e982e2dfd88
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Storage/storageAccounts/isantillan3adcadls
+DisplayName        : apv-isantillan-dev-01
+SignInName         :
+RoleDefinitionName : Storage Blob Data Reader
+RoleDefinitionId   : 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1
+ObjectId           : 348ee621-8b80-4e25-bea6-c510430f0aff
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+ResourceGroupName           : ace.sandbox.isantillan
+StorageAccountName          : isantillan3adcblob
+Id                          : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan
+                              /providers/Microsoft.Storage/storageAccounts/isantillan3adcblob/blobServices/default/cont
+                              ainers/starter1
+Name                        : starter1
+Type                        : Microsoft.Storage/storageAccounts/blobServices/containers
+Etag                        :
+Metadata                    :
+PublicAccess                :
+ImmutabilityPolicy          :
+LegalHold                   :
+LastModifiedTime            :
+LeaseStatus                 :
+LeaseState                  :
+LeaseDuration               :
+HasLegalHold                :
+HasImmutabilityPolicy       :
+DefaultEncryptionScope      :
+DenyEncryptionScopeOverride :
+RemainingRetentionDays      :
+DeletedTime                 :
+Deleted                     :
+Version                     :
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 3880
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/13/2021 1:12:03 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : creditcard_info.csv
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 48991
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/13/2021 1:12:03 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : customer_address.csv
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 66486
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/13/2021 1:12:03 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : customer_data.csv
+
+RoleAssignments in progress.
+Setting the Managed Identity 9ded5300-fda1-49ca-8e5e-b0198dce9169 on the Catalog: apv-isantillan-dev-01
+subscriptionId:a571e8c0-6420-4504-b6f3-ed0c12d282a4 catalogResourceGroup:ace.sandbox.isantillan catalogName=apv-isantillan-dev-01
+Giving isantillan3adcfactory (9ded5300-fda1-49ca-8e5e-b0198dce9169) Data Curator Access to Purview account apv-isantillan-dev-01
+
+RoleAssignmentId   : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01/providers/Microsoft.Authorization/roleAssignmen
+                     ts/6720dbc0-66d9-459b-8238-d0b814755a80
+Scope              : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/provider
+                     s/Microsoft.Purview/accounts/apv-isantillan-dev-01
+DisplayName        : isantillan3adcfactory
+SignInName         :
+RoleDefinitionName : Purview Data Curator (Legacy)
+RoleDefinitionId   : 8a3c2885-9b38-4fd2-9d99-91af537c1347
+ObjectId           : 9ded5300-fda1-49ca-8e5e-b0198dce9169
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+Name              : azureStorageLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobStorageLinkedService
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/linkedservices/azureStorageLinkedService
+ETag              : c003dde0-0000-0a00-0000-6166db2d0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureStorageLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureStorageLinkedServiceDataSet
+ETag              : c0033fe1-0000-0a00-0000-6166db2e0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureStorageGen2LinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobFSLinkedService
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/linkedservices/azureStorageGen2LinkedService
+ETag              : c003b7e1-0000-0a00-0000-6166db2f0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureStorageGen2LinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureStorageGen2LinkedServiceDataSe
+                    t
+ETag              : c0031de2-0000-0a00-0000-6166db300000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureKeyVaultLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureKeyVaultLinkedService
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/linkedservices/azureKeyVaultLinkedService
+ETag              : c00365e2-0000-0a00-0000-6166db310000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureSynapseLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWLinkedService
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/linkedservices/azureSynapseLinkedService
+ETag              : c0039de2-0000-0a00-0000-6166db320000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+CREATE TABLE [dbo].[CustomerAddress]  ( id int NULL, street_address VARCHAR(255) NULL, country VARCHAR(255) NULL, postcode VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+CREATE TABLE [dbo].[CustomerInfo]  ( id int NULL, first_name VARCHAR(255) NULL, last_name VARCHAR(255) NULL, email VARCHAR(255) NULL, gender VARCHAR(255) NULL, ip_address VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+CREATE TABLE [dbo].[CreditCardInfo]  ( id int NULL, creditcardno VARCHAR(255) NULL, ccardtype VARCHAR(255) NULL, ccardcountry VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+
+Name              : azureADLSCSVCustomerDataLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureADLSCSVCustomerDataLinkedServi
+                    ceDataSet
+ETag              : c003c8eb-0000-0a00-0000-6166db4c0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureADLSCSVCustomerAddressLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureADLSCSVCustomerAddressLinkedSe
+                    rviceDataSet
+ETag              : c0030cec-0000-0a00-0000-6166db4d0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureADLSCSVCreditCardNoLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureADLSCSVCreditCardNoLinkedServi
+                    ceDataSet
+ETag              : c00363ec-0000-0a00-0000-6166db4e0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureSynapseCustInfoLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureSynapseCustInfoLinkedServiceDa
+                    taSet
+ETag              : c0039fec-0000-0a00-0000-6166db4f0000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureSynapseCustAddLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureSynapseCustAddLinkedServiceDat
+                    aSet
+ETag              : c003ffec-0000-0a00-0000-6166db500000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+
+Name              : azureSynapseCredCardLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/datasets/azureSynapseCredCardLinkedServiceDa
+                    taSet
+ETag              : c00349ed-0000-0a00-0000-6166db510000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+Deploying pipeline
+
+Name              : ADLSToSynapseCopyPipeline
+Activities        : {CopytoADLS, Copycustomerdata, Copycustomeraddress, Copycreditcardno}
+Parameters        :
+Id                : /subscriptions/a571e8c0-6420-4504-b6f3-ed0c12d282a4/resourceGroups/ace.sandbox.isantillan/providers
+                    /Microsoft.DataFactory/factories/isantillan3adcfactory/pipelines/ADLSToSynapseCopyPipeline
+ETag              : c003aeed-0000-0a00-0000-6166db520000
+ResourceGroupName : ace.sandbox.isantillan
+DataFactoryName   : isantillan3adcfactory
+
+Executing Copy pipeline 2a1741c1-0d96-4ab9-9169-4b6a187533be
+Blob to ADLS to Synapse pipeline deployment complete and triggered.
+Deployment Completed.
+Your resource group is called ace.sandbox.isantillan
+Your SQL username is admin50216
+Your SQL password is J%gONyz1&7$1
+
+
+PS D:\_workspace\PurviewAccelerator\PurviewStarter> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20211013091315
+**********************

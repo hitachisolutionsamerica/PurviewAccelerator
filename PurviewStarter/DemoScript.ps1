@@ -426,9 +426,9 @@ if ($CreateAzureStorageAccount -eq $true) {
 
 Write-Output "Blob Storage Account Created"
 
-New-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup -TemplateFile ".\purviewtemplate_variables.json"
+# New-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup -TemplateFile ".\purviewtemplate_variables.json"
 
-Write-Output "Purview Account Created"
+# Write-Output "Purview Account Created"
 
 ##
 ## Check to see if we are going to update the ADF account
@@ -472,10 +472,10 @@ Write-Output "ADLS Storage Account Created"
 $ObjectIdpv = (Get-AzADServicePrincipal -SearchString $CatalogName).Id
 Write-Output $ObjectIdpv
 
-$usercontextAccountId = (Get-AzContext).account.id
+$usercontextAccountId = (Get-AzContext).Account.Id
 Write-Output $usercontextAccountId
 
-$usercontextAccountObjectId = (Get-AzADUser -Mail $usercontextAccountId).id
+$usercontextAccountObjectId = (Get-AzADUser -UserPrincipalName $usercontextAccountId).id
 
 New-AzKeyVault -Name $KeyVaultName -ResourceGroupName $ResourceGroup -Location $ResourcesLocation
 # Set-AzKeyVaultAccessPolicy -VaultName $KeyVaultName -UserPrincipalName $usercontextAccountId -PermissionsToSecrets get, set, delete, list

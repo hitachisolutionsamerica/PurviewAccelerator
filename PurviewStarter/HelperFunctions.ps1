@@ -2,31 +2,31 @@ using namespace System.Management.Automation.Host
 
 Function InstallAzureADModule () {
     Write-Output "Installing AzureAD Module. Please follow instructions on the pop-up window to complete this step."
-    Install-Module -Name AzureAD -Scope CurrentUser -AllowClobber -Force
+    Install-Module -Name AzureAD -Scope AllUsers -AllowClobber -Force
     Write-Output "AzureAD Module install complete."
 }
 
 Function InstallAZModule () {
     Write-Output "Installing Az Module. Please wait for completion notification."
-    Install-Module -Name Az -Scope CurrentUser -AllowClobber -Force
+    Install-Module -Name Az -Scope AllUsers -AllowClobber -Force
     Write-Output "Az Module install complete."
 }
 
 Function InstallAZAccountsModule () {
     Write-Output "Installing Az.Accounts Module. Please wait for completion notification."
-    Install-Module -Name Az.Accounts -Scope CurrentUser -AllowClobber -Force
+    Install-Module -Name Az.Accounts -Scope AllUsers -AllowClobber -Force
     Write-Output "Az.Accounts Module install complete."
 }
 
 Function InstallSqlServerModule () {
     Write-Output "Installing SqlServer Module. Please wait for completion notification."
-    Install-Module -Name SqlServer -Scope CurrentUser -Force
+    Install-Module -Name SqlServer -Scope AllUsers -Force
     Write-Output "SqlServer Module install complete."
 }
 
 Function InstallAZSynapseModule () {
     Write-Output "Installing Az.Synapse Module. Please wait for completion notification."
-    Install-Module -Name Az.Synapse -Scope CurrentUser -Force
+    Install-Module -Name Az.Synapse -Scope AllUsers -Force
     Write-Output "Az.Synapse Module install complete."
 }
 
