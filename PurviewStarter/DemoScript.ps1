@@ -476,6 +476,7 @@ $usercontextAccountId = (Get-AzContext).Account.Id
 Write-Output $usercontextAccountId
 
 $usercontextAccountObjectId = (Get-AzADUser -UserPrincipalName $usercontextAccountId).Id
+Write-Output $usercontextAccountObjectId
 
 New-AzKeyVault -Name $KeyVaultName -ResourceGroupName $ResourceGroup -Location $ResourcesLocation
 # Set-AzKeyVaultAccessPolicy -VaultName $KeyVaultName -UserPrincipalName $usercontextAccountId -PermissionsToSecrets get, set, delete, list
