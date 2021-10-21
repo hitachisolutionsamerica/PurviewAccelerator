@@ -3,15 +3,14 @@
 # Import helper functions script file
 . .\HelperFunctions.ps1
 
-[string]$ResourceGroup = "ace.sandbox.isantillan" #GenerateResourceGroupName -length 3
-[string]$ResourceGroup2 = "isantillan3" #GenerateResourceGroupName -length 3
-[string]$CatalogName = "apv-isantillan-dev-01"#$ResourceGroup2 + "pv"
+[string]$ResourceGroup = GenerateResourceGroupName -length 3
+[string]$CatalogName = $ResourceGroup + "pv"
 [string]$CatalogResourceGroup = $ResourceGroup
-[string]$StorageBlobName = $ResourceGroup2 + "adcblob"
-[string]$AdlsGen2Name = $ResourceGroup2 + "adcadls"
-[string]$DataFactoryName = $ResourceGroup2 + "adcfactory"
-[string]$KeyVaultName = $ResourceGroup2 + "kv"
-[string]$SynapseWorkspaceName = $ResourceGroup2 + "synapsews"
+[string]$StorageBlobName = $ResourceGroup + "adcblob"
+[string]$AdlsGen2Name = $ResourceGroup + "adcadls"
+[string]$DataFactoryName = $ResourceGroup + "adcfactory"
+[string]$KeyVaultName = $ResourceGroup + "kv"
+[string]$SynapseWorkspaceName = $ResourceGroup + "synapsews"
 [string]$SqlUser = GenerateSQLString -base "admin"
 [string]$SqlPassword = GenerateSQLString -base ""
 [string[]]$PurviewLocations = @("Australia East", "Brazil South", "Canada Central", "Central India", "East US", "East US 2", "South Central US", "Southeast Asia", "UK South", "West Europe")
