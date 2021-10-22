@@ -1,0 +1,766 @@
+**********************
+PowerShell transcript start
+Start time: 20211022091429
+Username: HISOL-CA\isantillan
+RunAs User: HISOL-CA\isantillan
+Configuration Name: 
+Machine: HSCA-PF1XYC31 (Microsoft Windows NT 10.0.19043.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 19644
+PSVersion: 7.1.5
+PSEdition: Core
+GitCommitId: 7.1.5
+OS: Microsoft Windows 10.0.19043
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.5
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\_workspace\PurviewAccelerator-2021-10-22-002.log
+PS D:\_workspace\PurviewAccelerator\PurviewStarter> .\RunStarterKit.ps1
+Checking for Az Module.
+Az Module is already installed.
+Checking for Az.Accounts Module.
+Az.Accounts Module is already imported.
+Checking for Az.Synapse Module.
+Az.Synapse Module is already installed and Imported.
+Checking for SQLServer Module.
+SqlServer Module is already installed.
+Checking for AzureAD Module.
+AzureAD Module is already installed.
+Check for AzureAD Module and Connect to AzureAD
+AzureAD Module is already imported. Follow Instructions to Connect.
+Connecting to Azure Account. Please follow instructions on the pop-up window to complete this step.
+ConnectAzAccount
+WARNING: TenantId 'b922b2fb-9e8d-425f-8a22-100cdf194faf' contains more than one active subscription. First one will be selected for further use. To select another subscription, use Set-AzContext.
+
+Account                    SubscriptionName TenantId                             Environment
+-------                    ---------------- --------                             -----------
+isantillan@capaxglobal.com Capax Sandbox    b922b2fb-9e8d-425f-8a22-100cdf194faf AzureCloud
+
+Name               : Capax Sandbox (a571e8c0-6420-4504-b6f3-ed0c12d282a4) - b922b2fb-9e8d-425f-8a22-100cdf194faf -
+                     isantillan@capaxglobal.com
+Account            : isantillan@capaxglobal.com
+Environment        : AzureCloud
+Subscription       : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Tenant             : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TokenCache         :
+VersionProfile     :
+ExtendedProperties : {}
+
+Azure Account connected.
+
+RunspaceId   : 353085f7-0835-47b3-a802-1fc3950d7eca
+Account      : isantillan@capaxglobal.com
+Environment  : AzureCloud
+Tenant       : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantId     : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantDomain : capaxglobal.com
+
+
+Name               : Capax Sandbox (a571e8c0-6420-4504-b6f3-ed0c12d282a4) - b922b2fb-9e8d-425f-8a22-100cdf194faf -
+                     isantillan@capaxglobal.com
+Account            : isantillan@capaxglobal.com
+Environment        : AzureCloud
+Subscription       : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Tenant             : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TokenCache         :
+VersionProfile     :
+ExtendedProperties : {}
+
+
+Id                        : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+Name                      : Capax Sandbox
+State                     : Enabled
+SubscriptionId            : a571e8c0-6420-4504-b6f3-ed0c12d282a4
+TenantId                  : b922b2fb-9e8d-425f-8a22-100cdf194faf
+HomeTenantId              : b922b2fb-9e8d-425f-8a22-100cdf194faf
+ManagedByTenantIds        : {2f4a9838-26b7-47ee-be60-ccc1fdec5953}
+CurrentStorageAccountName :
+SubscriptionPolicies      : {
+                              "LocationPlacementId": "Public_2014-09-01",
+                              "QuotaId": "MSDNDevTest_2014-09-01",
+                              "SpendingLimit": "Off"
+                            }
+ExtendedProperties        : {[Environment, AzureCloud], [Account, isantillan@capaxglobal.com], [ManagedByTenants,
+                            2f4a9838-26b7-47ee-be60-ccc1fdec5953], [AuthorizationSource, RoleBased]…}
+CurrentStorageAccount     :
+AuthorizationSource       : RoleBased
+Tags                      :
+
+
+Id                        : 77efd140-e800-4ad4-9563-097bd167f5c4
+Name                      : ace.analytics.ip.dev
+State                     : Enabled
+SubscriptionId            : 77efd140-e800-4ad4-9563-097bd167f5c4
+TenantId                  : b922b2fb-9e8d-425f-8a22-100cdf194faf
+HomeTenantId              : b922b2fb-9e8d-425f-8a22-100cdf194faf
+ManagedByTenantIds        : {}
+CurrentStorageAccountName :
+SubscriptionPolicies      : {
+                              "LocationPlacementId": "Public_2014-09-01",
+                              "QuotaId": "MSDNDevTest_2014-09-01",
+                              "SpendingLimit": "Off"
+                            }
+ExtendedProperties        : {[Environment, AzureCloud], [Account, isantillan@capaxglobal.com], [AuthorizationSource,
+                            RoleBased], [Tenants, b922b2fb-9e8d-425f-8a22-100cdf194faf]…}
+CurrentStorageAccount     :
+AuthorizationSource       : RoleBased
+Tags                      : {[Owner, Simon Nuss], [OwnerEmail, snuss@hitachisolutions.com], [Created, 10/15/2021],
+                            [CreatedBy, Mitch Prince]…}
+
+Please type the FULL and COMPLETE name of the subscription you would like to use:
+
+Name               : ace.analytics.ip.dev (77efd140-e800-4ad4-9563-097bd167f5c4) -
+                     b922b2fb-9e8d-425f-8a22-100cdf194faf - isantillan@capaxglobal.com
+Account            : isantillan@capaxglobal.com
+Environment        : AzureCloud
+Subscription       : 77efd140-e800-4ad4-9563-097bd167f5c4
+Tenant             : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TokenCache         :
+VersionProfile     :
+ExtendedProperties : {}
+
+Subscription selection confirmed:
+Subscription Name
+ace.analytics.ip.dev
+Subscription ID: 77efd140-e800-4ad4-9563-097bd167f5c4
+Tenant ID: b922b2fb-9e8d-425f-8a22-100cdf194faf
+You have chosen Canada Central as your resource location.
+This HTTP triggered function executed successfully. Thanks for using the Purview Accelerator.
+
+ResourceGroupName : pdemo390qad
+Location          : canadacentral
+ProvisioningState : Succeeded
+Tags              :
+TagsTable         :
+ResourceId        : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad
+ManagedBy         :
+
+
+AllowCrossTenantReplication :
+KeyCreationTime             : Microsoft.Azure.Commands.Management.Storage.Models.PSKeyCreationTime
+KeyPolicy                   :
+SasPolicy                   :
+ResourceGroupName           : pdemo390qad
+StorageAccountName          : pdemo390qadadcblob
+Id                          : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/
+                              Microsoft.Storage/storageAccounts/pdemo390qadadcblob
+Location                    : canadacentral
+Sku                         : Microsoft.Azure.Commands.Management.Storage.Models.PSSku
+Kind                        : StorageV2
+Encryption                  : Microsoft.Azure.Management.Storage.Models.Encryption
+AccessTier                  : Hot
+CreationTime                : 10/22/2021 1:15:49 PM
+CustomDomain                :
+Identity                    :
+LastGeoFailoverTime         :
+PrimaryEndpoints            : Microsoft.Azure.Management.Storage.Models.Endpoints
+PrimaryLocation             : canadacentral
+ProvisioningState           : Succeeded
+SecondaryEndpoints          :
+SecondaryLocation           :
+StatusOfPrimary             : Available
+StatusOfSecondary           :
+Tags                        : {}
+EnableHttpsTrafficOnly      : True
+AzureFilesIdentityBasedAuth :
+EnableHierarchicalNamespace : False
+FailoverInProgress          :
+LargeFileSharesState        :
+NetworkRuleSet              : Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
+RoutingPreference           :
+BlobRestoreStatus           :
+GeoReplicationStats         :
+AllowBlobPublicAccess       :
+MinimumTlsVersion           :
+EnableNfsV3                 :
+AllowSharedKeyAccess        :
+ExtendedLocation            :
+Context                     : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
+ExtendedProperties          : {}
+
+Blob Storage Account Created
+VERBOSE: Performing the operation "Creating Deployment" on target "pdemo390qad".
+VERBOSE: 9:16:13 AM - Template is valid.
+VERBOSE: 9:16:15 AM - Create template deployment 'purviewtemplate_variables'
+VERBOSE: 9:16:15 AM - Checking deployment status in 5 seconds
+VERBOSE: 9:16:20 AM - Resource Microsoft.Purview/accounts 'pdemo390qadpv' provisioning status is running
+VERBOSE: 9:16:20 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:16:36 AM - Checking deployment status in 15 seconds
+VERBOSE: 9:16:51 AM - Checking deployment status in 5 seconds
+VERBOSE: 9:16:56 AM - Checking deployment status in 12 seconds
+VERBOSE: 9:17:09 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:17:25 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:17:41 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:17:57 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:18:13 AM - Checking deployment status in 16 seconds
+VERBOSE: 9:18:29 AM - Checking deployment status in 5 seconds
+VERBOSE: 9:18:34 AM - Checking deployment status in 12 seconds
+VERBOSE: 9:18:46 AM - Checking deployment status in 15 seconds
+VERBOSE: 9:19:01 AM - Resource Microsoft.Purview/accounts 'pdemo390qadpv' provisioning status is succeeded
+
+ResourceGroupName       : pdemo390qad
+OnErrorDeployment       :
+DeploymentName          : purviewtemplate_variables
+CorrelationId           : 6589c451-2f28-43ef-a726-5fc70117e738
+ProvisioningState       : Succeeded
+Timestamp               : 10/22/2021 1:19:01 PM
+Mode                    : Incremental
+TemplateLink            :
+TemplateLinkString      :
+DeploymentDebugLogLevel :
+Parameters              :
+Tags                    :
+ParametersString        :
+Outputs                 : {}
+OutputsString           :
+
+Purview Account Created
+Data Factory Account Created
+
+AllowCrossTenantReplication :
+KeyCreationTime             : Microsoft.Azure.Commands.Management.Storage.Models.PSKeyCreationTime
+KeyPolicy                   :
+SasPolicy                   :
+ResourceGroupName           : pdemo390qad
+StorageAccountName          : pdemo390qadadcadls
+Id                          : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/
+                              Microsoft.Storage/storageAccounts/pdemo390qadadcadls
+Location                    : canadacentral
+Sku                         : Microsoft.Azure.Commands.Management.Storage.Models.PSSku
+Kind                        : StorageV2
+Encryption                  : Microsoft.Azure.Management.Storage.Models.Encryption
+AccessTier                  : Hot
+CreationTime                : 10/22/2021 1:19:10 PM
+CustomDomain                :
+Identity                    :
+LastGeoFailoverTime         :
+PrimaryEndpoints            : Microsoft.Azure.Management.Storage.Models.Endpoints
+PrimaryLocation             : canadacentral
+ProvisioningState           : Succeeded
+SecondaryEndpoints          :
+SecondaryLocation           :
+StatusOfPrimary             : Available
+StatusOfSecondary           :
+Tags                        : {}
+EnableHttpsTrafficOnly      : True
+AzureFilesIdentityBasedAuth :
+EnableHierarchicalNamespace : True
+FailoverInProgress          :
+LargeFileSharesState        :
+NetworkRuleSet              : Microsoft.Azure.Commands.Management.Storage.Models.PSNetworkRuleSet
+RoutingPreference           :
+BlobRestoreStatus           :
+GeoReplicationStats         :
+AllowBlobPublicAccess       :
+MinimumTlsVersion           :
+EnableNfsV3                 :
+AllowSharedKeyAccess        :
+ExtendedLocation            :
+Context                     : Microsoft.WindowsAzure.Commands.Common.Storage.LazyAzureStorageContext
+ExtendedProperties          : {}
+
+
+ADLS Storage Account Created
+fd21bdde-b763-439c-94b8-92f7d36129a3
+isantillan@capaxglobal.com
+b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+
+VaultUri                     : https://pdemo390qadkv.vault.azure.net/
+TenantId                     : b922b2fb-9e8d-425f-8a22-100cdf194faf
+TenantName                   : b922b2fb-9e8d-425f-8a22-100cdf194faf
+Sku                          : Standard
+EnabledForDeployment         : False
+EnabledForTemplateDeployment : False
+EnabledForDiskEncryption     : False
+EnableSoftDelete             : True
+EnablePurgeProtection        :
+EnableRbacAuthorization      : False
+SoftDeleteRetentionInDays    : 90
+AccessPolicies               : {b922b2fb-9e8d-425f-8a22-100cdf194faf}
+AccessPoliciesText           :
+                               Tenant ID                                  : b922b2fb-9e8d-425f-8a22-100cdf194faf
+                               Object ID                                  : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+                               Application ID                             :
+                               Display Name                               : Ian Santillan (isantillan@capaxglobal.com)
+                               Permissions to Keys                        : get, create, delete, list, update, import,
+                               backup, restore, recover
+                               Permissions to Secrets                     : get, list, set, delete, backup, restore,
+                               recover
+                               Permissions to Certificates                : get, delete, list, create, import, update,
+                               deleteissuers, getissuers, listissuers, managecontacts, manageissuers, setissuers,
+                               recover, backup, restore
+                               Permissions to (Key Vault Managed) Storage : delete, deletesas, get, getsas, list,
+                               listsas, regeneratekey, set, setsas, update, recover, backup, restore
+
+
+NetworkAcls                  : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultNetworkRuleSet
+NetworkAclsText              :
+                               Default Action                             : Allow
+                               Bypass                                     : AzureServices
+                               IP Rules                                   :
+                               Virtual Network Rules                      :
+
+OriginalVault                : Microsoft.Azure.Management.KeyVault.Models.Vault
+ResourceId                   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers
+                               /Microsoft.KeyVault/vaults/pdemo390qadkv
+VaultName                    : pdemo390qadkv
+ResourceGroupName            : pdemo390qad
+Location                     : Canada Central
+Tags                         : {}
+TagsTable                    :
+
+
+SecretValue : System.Security.SecureString
+Attributes  : Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecretAttributes
+Enabled     : True
+Expires     :
+NotBefore   :
+Created     : 10/22/2021 1:20:09 PM
+Updated     : 10/22/2021 1:20:09 PM
+ContentType :
+Tags        :
+TagsTable   :
+VaultName   : pdemo390qadkv
+Name        : SQLPassword
+Version     : 9440eb5964bc4453a36e7c7c5114f76e
+Id          : https://pdemo390qadkv.vault.azure.net:443/secrets/SQLPassword/9440eb5964bc4453a36e7c7c5114f76e
+
+Key Vault Account Created
+
+DefaultDataLakeStorage           : Microsoft.Azure.Commands.Synapse.Models.PSDataLakeStorageAccountDetails
+ManagedResourceGroupName         : synapseworkspace-managedrg-14428ae9-f8c6-4f04-8e97-b07e9b2073dc
+ProvisioningState                : Succeeded
+SqlAdministratorLogin            : admin28284
+VirtualNetworkProfile            :
+Identity                         : Microsoft.Azure.Commands.Synapse.Models.PSManagedIdentity
+ConnectivityEndpoints            : {[web, https://web.azuresynapse.net?workspace=%2fsubscriptions%2f77efd140-e800-4ad4-
+                                   9563-097bd167f5c4%2fresourceGroups%2fpdemo390qad%2fproviders%2fMicrosoft.Synapse%2fw
+                                   orkspaces%2fpdemo390qadsynapsews], [dev,
+                                   https://pdemo390qadsynapsews.dev.azuresynapse.net], [sqlOnDemand,
+                                   pdemo390qadsynapsews-ondemand.sql.azuresynapse.net], [sql,
+                                   pdemo390qadsynapsews.sql.azuresynapse.net]}
+ManagedVirtualNetwork            :
+PrivateEndpointConnections       : {}
+WorkspaceUID                     : f7c5f9bc-2c44-4855-932b-04c0286c417f
+ExtraProperties                  : {[WorkspaceType, Normal], [IsScopeEnabled, False]}
+ManagedVirtualNetworkSettings    :
+Encryption                       : Microsoft.Azure.Commands.Synapse.Models.PSEncryptionDetails
+WorkspaceRepositoryConfiguration :
+Tags                             :
+TagsTable                        :
+Location                         : canadacentral
+Id                               : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/provi
+                                   ders/Microsoft.Synapse/workspaces/pdemo390qadsynapsews
+Name                             : pdemo390qadsynapsews
+Type                             : Microsoft.Synapse/workspaces
+
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcadls/providers/Microsoft.Authorization/roleAssignments/008c
+                     e80e-489d-494d-93d0-a2311d2454e6
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcadls
+DisplayName        : pdemo390qadsynapsews
+SignInName         :
+RoleDefinitionName : Storage Blob Data Contributor
+RoleDefinitionId   : ba92f5b4-2d11-453d-a403-e96b0029c9fe
+ObjectId           : d025ff8e-014b-4f4a-8b35-e83b714fb3f3
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+EndIpAddress      : 255.255.255.255
+ProvisioningState : Succeeded
+StartIpAddress    : 0.0.0.0
+
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Synapse/workspaces/pdemo390qadsynapsews/providers/Microsoft.Authorization/roleAssignments/8f53825
+                     7-cbc0-4648-8c3b-c29e12227d8b
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Synapse/workspaces/pdemo390qadsynapsews
+DisplayName        : pdemo390qadpv
+SignInName         :
+RoleDefinitionName : Reader
+RoleDefinitionId   : acdd72a7-3385-48ef-bd42-f606fba81ae7
+ObjectId           : fd21bdde-b763-439c-94b8-92f7d36129a3
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+ResourceGroupName     : pdemo390qad
+WorkspaceName         : pdemo390qadsynapsews
+SqlPoolName           : SQLPool
+Sku                   : DW100c
+MaxSizeBytes          : 263882790666240
+Collation             : SQL_Latin1_General_CP1_CI_AS
+SourceDatabaseId      :
+RecoverableDatabaseId :
+ProvisioningState     : Succeeded
+Status                : Online
+RestorePointInTime    : 1/1/0001 12:00:00 AM
+CreateMode            :
+CreationDate          : 10/22/2021 1:26:40 PM
+Tags                  :
+TagsTable             :
+Location              : canadacentral
+Id                    : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Micros
+                        oft.Synapse/workspaces/pdemo390qadsynapsews/sqlPools/SQLPool
+Type                  : Microsoft.Synapse/workspaces/sqlPools
+
+Synapse Workspace Account Created
+Setting the Managed Identity (isantillan@capaxglobal.com) b8c5f2ce-6eaa-4792-9a0d-2248d191da09 on the Catalog: pdemo390qadpv
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv/providers/Microsoft.Authorization/roleAssignments/3c762a53-304a-44
+                     e9-9af0-d060aacea5b8
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv
+DisplayName        : Ian Santillan
+SignInName         : isantillan@capaxglobal.com
+RoleDefinitionName : Owner
+RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+ObjectId           : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+ObjectType         : User
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .DataFactory/factories/pdemo390qadadcfactory/providers/Microsoft.Authorization/roleAssignments/f98
+                     ee1c4-c330-4253-81ed-24741ab6c749
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .DataFactory/factories/pdemo390qadadcfactory
+DisplayName        : Ian Santillan
+SignInName         : isantillan@capaxglobal.com
+RoleDefinitionName : Owner
+RoleDefinitionId   : 8e3af657-a8ff-443c-a75c-2fe8c4bcb635
+ObjectId           : b8c5f2ce-6eaa-4792-9a0d-2248d191da09
+ObjectType         : User
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+Setting the Managed Identity d025ff8e-014b-4f4a-8b35-e83b714fb3f3 on the Catalog: pdemo390qadpv
+subscriptionId:77efd140-e800-4ad4-9563-097bd167f5c4 catalogResourceGroup:pdemo390qad catalogName=pdemo390qadpv
+Giving pdemo390qadsynapsews (d025ff8e-014b-4f4a-8b35-e83b714fb3f3) Data Curator Access to Purview account pdemo390qadpv
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv/providers/Microsoft.Authorization/roleAssignments/95e81d03-bb80-4e
+                     6c-b459-7c42e24e0ee5
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv
+DisplayName        : pdemo390qadsynapsews
+SignInName         :
+RoleDefinitionName : Purview Data Curator (Legacy)
+RoleDefinitionId   : 8a3c2885-9b38-4fd2-9d99-91af537c1347
+ObjectId           : d025ff8e-014b-4f4a-8b35-e83b714fb3f3
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+subscriptionId:77efd140-e800-4ad4-9563-097bd167f5c4 catalogResourceGroup:pdemo390qad catalogName=pdemo390qadpv
+Giving pdemo390qadpv (fd21bdde-b763-439c-94b8-92f7d36129a3) Storage Blob Data Reader Access to Storage account pdemo390qadadcblob
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcblob/providers/Microsoft.Authorization/roleAssignments/19e3
+                     e9b6-a7f9-4889-8f3d-3d849b690c4c
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcblob
+DisplayName        : pdemo390qadpv
+SignInName         :
+RoleDefinitionName : Storage Blob Data Reader
+RoleDefinitionId   : 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1
+ObjectId           : fd21bdde-b763-439c-94b8-92f7d36129a3
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+subscriptionId:77efd140-e800-4ad4-9563-097bd167f5c4 catalogResourceGroup:pdemo390qad catalogName=pdemo390qadpv
+Giving pdemo390qadpv (fd21bdde-b763-439c-94b8-92f7d36129a3) Storage Blob Data Reader Access to Storage account pdemo390qadadcadls
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcadls/providers/Microsoft.Authorization/roleAssignments/fc52
+                     e216-3c0d-4f42-8710-d55c7f96528a
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Storage/storageAccounts/pdemo390qadadcadls
+DisplayName        : pdemo390qadpv
+SignInName         :
+RoleDefinitionName : Storage Blob Data Reader
+RoleDefinitionId   : 2a2b9908-6ea1-4ae2-8e65-a410df84e7d1
+ObjectId           : fd21bdde-b763-439c-94b8-92f7d36129a3
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+ResourceGroupName           : pdemo390qad
+StorageAccountName          : pdemo390qadadcblob
+Id                          : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/
+                              Microsoft.Storage/storageAccounts/pdemo390qadadcblob/blobServices/default/containers/star
+                              ter1
+Name                        : starter1
+Type                        : Microsoft.Storage/storageAccounts/blobServices/containers
+Etag                        :
+Metadata                    :
+PublicAccess                :
+ImmutabilityPolicy          :
+LegalHold                   :
+LastModifiedTime            :
+LeaseStatus                 :
+LeaseState                  :
+LeaseDuration               :
+HasLegalHold                :
+HasImmutabilityPolicy       :
+DefaultEncryptionScope      :
+DenyEncryptionScopeOverride :
+RemainingRetentionDays      :
+DeletedTime                 :
+Deleted                     :
+Version                     :
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 3880
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/22/2021 1:27:11 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : creditcard_info.csv
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 48991
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/22/2021 1:27:11 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : customer_address.csv
+
+
+ICloudBlob                         : Microsoft.Azure.Storage.Blob.CloudBlockBlob
+BlobType                           : BlockBlob
+Length                             : 66486
+IsDeleted                          : False
+BlobClient                         : Azure.Storage.Blobs.BlobClient
+BlobBaseClient                     : Azure.Storage.Blobs.Specialized.BlockBlobClient
+BlobProperties                     : Azure.Storage.Blobs.Models.BlobProperties
+RemainingDaysBeforePermanentDelete :
+ContentType                        : application/octet-stream
+LastModified                       : 10/22/2021 1:27:11 PM +00:00
+SnapshotTime                       :
+ContinuationToken                  :
+VersionId                          :
+IsLatestVersion                    :
+AccessTier                         : Hot
+TagCount                           : 0
+Tags                               :
+Context                            : Microsoft.WindowsAzure.Commands.Storage.AzureStorageContext
+Name                               : customer_data.csv
+
+RoleAssignments in progress.
+Setting the Managed Identity df1c1f5a-beb3-4468-a7f5-5845cfee63f5 on the Catalog: pdemo390qadpv
+subscriptionId:77efd140-e800-4ad4-9563-097bd167f5c4 catalogResourceGroup:pdemo390qad catalogName=pdemo390qadpv
+Giving pdemo390qadadcfactory (df1c1f5a-beb3-4468-a7f5-5845cfee63f5) Data Curator Access to Purview account pdemo390qadpv
+
+RoleAssignmentId   : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv/providers/Microsoft.Authorization/roleAssignments/6ac7ac97-e4bf-4f
+                     69-98bd-9474907d2e14
+Scope              : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft
+                     .Purview/accounts/pdemo390qadpv
+DisplayName        : pdemo390qadadcfactory
+SignInName         :
+RoleDefinitionName : Purview Data Curator (Legacy)
+RoleDefinitionId   : 8a3c2885-9b38-4fd2-9d99-91af537c1347
+ObjectId           : df1c1f5a-beb3-4468-a7f5-5845cfee63f5
+ObjectType         : ServicePrincipal
+CanDelegate        : False
+Description        :
+ConditionVersion   :
+Condition          :
+
+
+Name              : azureStorageLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobStorageLinkedService
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/linkedservices/azureStorageLinkedService
+ETag              : ad000724-0000-0a00-0000-6172bc380000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureStorageLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureStorageLinkedServiceDataSet
+ETag              : ad001924-0000-0a00-0000-6172bc390000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureStorageGen2LinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureBlobFSLinkedService
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/linkedservices/azureStorageGen2LinkedService
+ETag              : ad002b24-0000-0a00-0000-6172bc3a0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureStorageGen2LinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureStorageGen2LinkedServiceDataSet
+ETag              : ad003924-0000-0a00-0000-6172bc3b0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureKeyVaultLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureKeyVaultLinkedService
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/linkedservices/azureKeyVaultLinkedService
+ETag              : ad004b24-0000-0a00-0000-6172bc3b0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureSynapseLinkedService
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWLinkedService
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/linkedservices/azureSynapseLinkedService
+ETag              : ad005e24-0000-0a00-0000-6172bc3c0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+CREATE TABLE [dbo].[CustomerAddress]  ( id int NULL, street_address VARCHAR(255) NULL, country VARCHAR(255) NULL, postcode VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+CREATE TABLE [dbo].[CustomerInfo]  ( id int NULL, first_name VARCHAR(255) NULL, last_name VARCHAR(255) NULL, email VARCHAR(255) NULL, gender VARCHAR(255) NULL, ip_address VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+CREATE TABLE [dbo].[CreditCardInfo]  ( id int NULL, creditcardno VARCHAR(255) NULL, ccardtype VARCHAR(255) NULL, ccardcountry VARCHAR(255) NULL ) WITH ( DISTRIBUTION = HASH (id), CLUSTERED COLUMNSTORE INDEX )
+
+Name              : azureADLSCSVCustomerDataLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureADLSCSVCustomerDataLinkedServiceDataSet
+ETag              : ad004e26-0000-0a00-0000-6172bc560000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureADLSCSVCustomerAddressLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureADLSCSVCustomerAddressLinkedServiceDataSe
+                    t
+ETag              : ad006126-0000-0a00-0000-6172bc570000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureADLSCSVCreditCardNoLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.DelimitedTextDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureADLSCSVCreditCardNoLinkedServiceDataSet
+ETag              : ad007b26-0000-0a00-0000-6172bc580000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureSynapseCustInfoLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureSynapseCustInfoLinkedServiceDataSet
+ETag              : ad008926-0000-0a00-0000-6172bc590000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureSynapseCustAddLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureSynapseCustAddLinkedServiceDataSet
+ETag              : ad008f26-0000-0a00-0000-6172bc590000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+
+Name              : azureSynapseCredCardLinkedServiceDataSet
+Structure         :
+Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureSqlDWTableDataset
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/datasets/azureSynapseCredCardLinkedServiceDataSet
+ETag              : ad00a126-0000-0a00-0000-6172bc5a0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+Deploying pipeline
+
+Name              : ADLSToSynapseCopyPipeline
+Activities        : {CopytoADLS, Copycustomerdata, Copycustomeraddress, Copycreditcardno}
+Parameters        :
+Id                : /subscriptions/77efd140-e800-4ad4-9563-097bd167f5c4/resourceGroups/pdemo390qad/providers/Microsoft.
+                    DataFactory/factories/pdemo390qadadcfactory/pipelines/ADLSToSynapseCopyPipeline
+ETag              : ad00ae26-0000-0a00-0000-6172bc5b0000
+ResourceGroupName : pdemo390qad
+DataFactoryName   : pdemo390qadadcfactory
+
+Executing Copy pipeline 84ba9a52-8ee1-40b9-a2d5-79fe4b57db58
+Blob to ADLS to Synapse pipeline deployment complete and triggered.
+Deployment Completed.
+Your resource group is called pdemo390qad
+Your SQL username is admin28284
+Your SQL password is N7o#9Q&4yWj#
+
+PS D:\_workspace\PurviewAccelerator\PurviewStarter> Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20211022092818
+**********************

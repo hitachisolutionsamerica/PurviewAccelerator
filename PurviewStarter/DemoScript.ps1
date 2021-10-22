@@ -426,7 +426,7 @@ if ($CreateAzureStorageAccount -eq $true) {
 
 Write-Output "Blob Storage Account Created"
 
-New-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup -TemplateFile ".\purviewtemplate_variables.json"
+New-AzResourceGroupDeployment -ResourceGroupName $ResourceGroup -TemplateFile ".\purviewtemplate_variables.json" -Verbose
 
 Write-Output "Purview Account Created"
 
